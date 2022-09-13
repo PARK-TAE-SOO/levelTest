@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  function base10Tostring(n){
+    let answer  = '';
+    function base10TostringHelper(n){
+      if(n===0){
+        return;
+      }
+      else{
+        base10TostringHelper(parseInt(n/2));
+        answer += String(n%2);
+      }
+    }
+    base10TostringHelper(n);
+    return answer;
+  }
+  console.log(base10Tostring(100));
+</script>
+</html>
